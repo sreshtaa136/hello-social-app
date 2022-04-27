@@ -33,7 +33,7 @@ lambda_client = boto3.client('lambda',
                 aws_session_token = session_token
 )
 
-bucket_name = "hello-app-content"
+bucket_name = "elasticbeanstalk-us-east-1-746117589130"
 
 def create_users_table(dynamodb=None):
     # creating table if it doesn't exist

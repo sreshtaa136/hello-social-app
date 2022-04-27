@@ -14,7 +14,7 @@ s3 = boto3.client('s3',
             aws_session_token = session_token
 )
 
-bucket_name = "hello-app-content"
+bucket_name = "elasticbeanstalk-us-east-1-746117589130"
 
 # this file is a blueprint of our app 
 # (it contains all the routes)

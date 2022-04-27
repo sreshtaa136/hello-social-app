@@ -89,11 +89,11 @@
             padding-top: 9px;
             padding-bottom: 9px;">
 
-                <div style="margin: 0px 12px;" class="fb-share-button" data-href="http://127.0.0.1:5000/share/{{ email1 }}&#064;{{ email2 }}/{{ note.id }}" data-layout="button" data-size="large">
-                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A5000%2Fshare%2F{{ email1 }}%40{{ email2 }}%2F{{ note.id }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                <div style="margin: 0px 12px;" class="fb-share-button" data-href="http://helloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com/share/{{ email1 }}&#064;{{ email2 }}/{{ note.id }}" data-layout="button" data-size="large">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhelloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com%2Fshare%2F{{ email1 }}%40{{ email2 }}%2F{{ note.id }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
                 </div>
 
-                <a style="margin: 0px 12px;" data-size="large" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="A note by @{{ note.user_name }} on hello" data-url="http://127.0.0.1:5000/share/{{ note.email }}/{{ note.id }}" style="margin: 0px 8px;" data-show-count="false"></a> 
+                <a style="margin: 0px 12px;" data-size="large" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="A note by @{{ note.user_name }} on hello" data-url="http://helloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com/share/{{ note.email }}/{{ note.id }}" style="margin: 0px 8px;" data-show-count="false"></a> 
 
                 <a href="#" class="linkedin-btn" style="margin: 0px 12px;" name="A note by @{{ note.user_name }} on hello:linkedin" onclick="shareNote(name)">
                     <i class="fab fa-linkedin" style="color: #0077b5;font-size: 30px;"></i>

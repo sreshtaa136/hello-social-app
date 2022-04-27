@@ -1,10 +1,10 @@
 
 function deleteNote(noteId) {
   let nid = noteId;
-  let index = nid.indexOf(".") + 4;
-  let l = nid.slice(0,index);
+  let index = nid.indexOf(".com") + 4;
+  let email = nid.slice(0,index);
   let s = "/home/";
-  let result = s.concat(l);
+  let result = s.concat(email);
 
   // sending a request to '/delete-note'
   // then reloading the window (home page)

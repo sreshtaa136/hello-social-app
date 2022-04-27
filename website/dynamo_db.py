@@ -6,12 +6,14 @@ secret_access_key = "mwaONIIz8hcGZstS8rEtjXEHYZpvqJEulugaH85d"
 session_token = "FwoGZXIvYXdzEBEaDInFHNonhxkkerVmBSLNAd6QcOjYODZRtt5N+LvydgmRyWU6Ak3fZA1rSFQhUu7GSWJymJGY7861Ysg6/ZKmvFWFMWkWWmqNudVSMIL3bPMxeEhdu+Pa5e1tqvfQivTmDzpC+tyAE3GmeJaC0cQHVdEG3Ptxi6ZHZmN5kVTp3Qu+r3uSbobX4NU7vtOkTTxKEs2ouwq9V/Luwk/ir1rOv9luFWy2kqcYWide/m5/IkaZrUIw91fMUj14Zp8rRb4zqYBngmtNUeSwIM5QYTnlUJ06V8ORglWwknR7iscoyuOjkwYyLd6M3gBsivquiBfE03Y6IuYJz7pQPZ61wdabyf6BbgDWKFdT+yMz79f2b1AUHg=="
 
 dynamodb = boto3.resource('dynamodb',
+                region_name="us-east-1",
                 aws_access_key_id = access_key_id,
                 aws_secret_access_key = secret_access_key,
                 aws_session_token = session_token
 )
 
 client = boto3.client('dynamodb',
+                    region_name="us-east-1",
                     aws_access_key_id = access_key_id,
                     aws_secret_access_key = secret_access_key,
                     aws_session_token = session_token

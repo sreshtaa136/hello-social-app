@@ -207,11 +207,8 @@ def delete_user_image(email, file_name):
 
 
 def get_url(file_name):
-    try:
-        presigned_url = s3.generate_presigned_url('get_object', Params = {'Bucket': bucket_name, 'Key': file_name}, ExpiresIn = 86400)
-    except Exception as e:
-        pass
-    return presigned_url
+    url = "https://d6ondcb9w3k82.cloudfront.net/" + file_name
+    return url
 
 
 def get_image(email, id):

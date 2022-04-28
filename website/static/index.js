@@ -20,8 +20,8 @@ function deleteImage(url) {
   let index = url.indexOf(".com") + 4;
   let email = url.slice(0,index);
   let s = url.slice(index);
-  index = s.indexOf(".com") + 5;
-  let name = s.slice(index, s.indexOf("?"));
+  index = s.indexOf(".net") + 5;
+  let name = s.slice(index);
   let a = "/home/";
   let result = a.concat(email);
 

@@ -19,8 +19,6 @@ function deleteNote(noteId) {
 function deleteImage(url) {
   let index = url.indexOf(".com") + 4;
   let email = url.slice(0,index);
-  // let s = url.slice(index)
-  // let name = s.slice(43, s.indexOf("?"))
   let s = url.slice(index);
   index = s.indexOf(".com") + 5;
   let name = s.slice(index, s.indexOf("?"));

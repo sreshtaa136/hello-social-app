@@ -18,7 +18,6 @@ def login():
             if check_password_hash(curr_user.password, password):
                 # taking user to home page
                 return redirect(url_for('views.home', user=email))
-                # return render_template("home.html", user=current_user, notes=all_notes, images=all_images, img_details=image_details)
             else:
                 flash('Incorrect password, try again.', category='error')
         else:

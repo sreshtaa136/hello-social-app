@@ -50,7 +50,8 @@
         <!-- LOGO -->
         <section class="logo">
             <div class="logo-img">
-                <img src="{{ url_for('static', filename='images/hello.png')}}" alt="hello" 
+                <!-- <img src="{{ url_for('static', filename='images/hello.png')}}" alt="hello"  -->
+                <img src="https://d6ondcb9w3k82.cloudfront.net/hello.png" alt="hello"
                 style="
                 width: 20%;
                 display: block;
@@ -110,8 +111,6 @@
             ">
             <br>
                 <form enctype="multipart/form-data" method="POST"> 
-                    <!-- <small id="emailHelp" class="form-text text-muted">{{ user.email }}</small> -->
-                    <!-- <input id="email" type="hidden" class="form-text text-muted" value = {{ user.email }}> -->
                     <input type="file" name="usr-img" />
                     <br />
                     <br />

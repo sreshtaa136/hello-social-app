@@ -55,6 +55,7 @@
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="8wOUQmNR"></script>
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="yWC5KHl0"></script>
+           
 
             {% if note %}
             <br>
@@ -80,8 +81,8 @@
             <div class="btn-group" 
             style="
             float:left;
-            left:39.25%;
-            transform:translateY(-39.25%);
+            left:35.25%;
+            transform:translateY(-35.25%);
             background-color: white;
             border-radius: 10px;
             -webkit-filter: drop-shadow(5px 5px 5px #666666);
@@ -95,12 +96,20 @@
 
                 <a style="margin: 0px 12px;" data-size="large" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="A note by @{{ note.user_name }} on hello" data-url="http://helloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com/share/{{ note.email }}/{{ note.id }}" style="margin: 0px 8px;" data-show-count="false"></a> 
 
+                <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fhelloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com%2Fshare%2F{{ email1 }}%40{{ email2 }}%2F{{ note.id }}" target="_blank" title="Submit to Reddit">
+                    <img alt="Reddit" src="https://i.pinimg.com/originals/db/a1/39/dba13992aa33c33e549c4ef9fbb7effe.png" style="height: 0.8cm;margin: 0px 12px;" />
+                </a>
+
                 <a href="#" class="linkedin-btn" style="margin: 0px 12px;" name="A note by @{{ note.user_name }} on hello:linkedin" onclick="shareNote(name)">
                     <i class="fab fa-linkedin" style="color: #0077b5;font-size: 30px;"></i>
                 </a> 
 
                 <a href="#" class="whatsapp-btn" style="margin: 0px 12px;" name="A note by @{{ note.user_name }} on hello:whatsapp" onclick="shareNote(name)">
                     <i class="fab fa-whatsapp" style="color: #25d366;font-size: 30px;"></i>
+                </a>
+                
+                <a href="mailto:?subject=A%20note&body=%20http%3A%2F%2Fhelloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com%2Fshare%2F{{ email1 }}%40{{ email2 }}%2F{{ note.id }}" target="_blank" title="Send email">
+                    <img alt="email" src="https://img.icons8.com/ios-filled/344/new-post.png" style="height: 0.7cm;margin: 0px 12px;"/>
                 </a>
 
             </div>
@@ -127,8 +136,8 @@
             <div class="btn-group" 
             style="
             float:left;
-            left:37.6%;
-            transform:translateY(-37.6%);
+            left:33.6%;
+            transform:translateY(-33.6%);
             top: 50%;
             transform: translateY(-50%);
             background-color: white;
@@ -145,6 +154,10 @@
 
                 <a style="margin: 0px 12px;" data-size="large" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="An image by @{{ image.name }} on hello" data-url="http://helloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com/share/{{ image.email }}/{{ image.fileName }}" style="margin: 0px 8px;" data-show-count="false"></a> 
 
+                <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fhelloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com%2Fshare%2F{{ email1 }}%40{{ email2 }}%2F{{ image.fileName }}" target="_blank" title="Submit to Reddit">
+                    <img alt="Reddit" src="https://i.pinimg.com/originals/db/a1/39/dba13992aa33c33e549c4ef9fbb7effe.png" style="height: 0.8cm;margin: 0px 12px;" />
+                </a>
+                
                 <a href="#" class="linkedin-btn" style="margin: 0px 8px;" name="An image by @{{ image.name }} on hello:linkedin" onclick="shareNote(name)">
                     <i class="fab fa-linkedin" style="color: #0077b5;font-size: 30px;"></i>
                 </a> 
@@ -155,6 +168,10 @@
 
                 <a data-pin-do="buttonPin" style="margin: 0px 8px;" data-pin-tall="true" data-pin-round="true" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fhelloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com%2Fshare%2F{{ email1 }}%40{{ email2 }}%2F{{ image.fileName }}&media={{ image.url }}&description=Next%20stop%3A%20Pinterest">
                     <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_32.png" style="height: 3cm;" />
+                </a>
+
+                <a href="mailto:?subject=An%20image&body=%20http%3A%2F%2Fhelloapp-env.eba-t9qqrmxm.us-east-1.elasticbeanstalk.com%2Fshare%2F{{ email1 }}%40{{ email2 }}%2F{{ image.fileName }}" target="_blank" title="Send email">
+                    <img alt="email" src="https://img.icons8.com/ios-filled/344/new-post.png" style="height: 0.7cm;margin: 0px 12px;"/>
                 </a>
 
             </div>

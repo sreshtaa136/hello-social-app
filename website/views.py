@@ -3,9 +3,9 @@ from . import dynamo_db
 import json, os, boto3
 from werkzeug.utils import secure_filename
 
-access_key_id = "ASIA23OAS5CFC3OMHAO7"
-secret_access_key = "DP6ztH8WsvHJAoDFaVcHJyj6KD775kMGaMV8yjSz"
-session_token = "FwoGZXIvYXdzECsaDPZXCr7DYAnLwfF13iLNAdtNm+nZ1t6j0L4ZVetivkjGfjXbzgDh50wHMAGOEXwN1GD6ZfVeHnFpUaOHIALOKEdTm3xoptqWhs71fEEqMjEgcRm1uz7c7+8WdcwYKiLeO/JMmwoF9wBXlHpMX0K2XVig7RtuDciOK2aa3VJBf3zdp6Vd7NWhYwrGAA6pK9+CGhsNeKlaWo5y9rmgy+RZFJ73BtrZbVWjiJ702a1vIhR9u9RHMctmpr9fcmobhrI/JCFZLOtmViyZ5oRLg1HbMNmnV6RF8mU2SSg26pEonb2pkwYyLTeHAUF2wnSIcLEAES/apGIV6UHDUMSpF35XKHsnZgS3MgstQ+CTu805cLT77Q=="
+access_key_id = "ASIA23OAS5CFJTGIDDNM"
+secret_access_key = "SmTom0yPWUT2VhW3hpZSjGQs7vQXAKuYeW1dQ19y"
+session_token = "FwoGZXIvYXdzEEYaDLD3EHMUIkmxTZdzdSLNASigJUllY3E+jXg4qALLsRq5CwiLk5SXwFpReLLjlcKxzD9gd7CUruZbHJ0FEYYq3eNzCLsMTGqtnIbjeqK+r6IEmig0ozvlKyEIcER3KCcfMHjXXBYykqEELjccyVmF6RMd66vNpNTof6fVt+Vkni5q09/f4eOoQ+pBD86beva82cBD3/1+T+oMznsEyi+k0ln5lPy6HUa7YMmoD0ausL1VtU5AfY6yP8B/8ebTpfupIKy0WR7RMRyLrEF41KW+BYZx2A6EJq3NEF0Ji5Io6sCvkwYyLc+PxvCuVFBvWWOi1EbybFY9VlWNSbR6LAttqgVQggyHibrkQJo7dD32eCXigw=="
 
 s3 = boto3.client('s3',
             region_name="us-east-1",

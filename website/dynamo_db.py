@@ -1,9 +1,9 @@
 import boto3, json
 from .models import Note, User
 
-access_key_id = "ASIA23OAS5CFJTGIDDNM"
-secret_access_key = "SmTom0yPWUT2VhW3hpZSjGQs7vQXAKuYeW1dQ19y"
-session_token = "FwoGZXIvYXdzEEYaDLD3EHMUIkmxTZdzdSLNASigJUllY3E+jXg4qALLsRq5CwiLk5SXwFpReLLjlcKxzD9gd7CUruZbHJ0FEYYq3eNzCLsMTGqtnIbjeqK+r6IEmig0ozvlKyEIcER3KCcfMHjXXBYykqEELjccyVmF6RMd66vNpNTof6fVt+Vkni5q09/f4eOoQ+pBD86beva82cBD3/1+T+oMznsEyi+k0ln5lPy6HUa7YMmoD0ausL1VtU5AfY6yP8B/8ebTpfupIKy0WR7RMRyLrEF41KW+BYZx2A6EJq3NEF0Ji5Io6sCvkwYyLc+PxvCuVFBvWWOi1EbybFY9VlWNSbR6LAttqgVQggyHibrkQJo7dD32eCXigw=="
+access_key_id = "ASIA23OAS5CFCNNKEEIS"
+secret_access_key = "odZISGHCv6xOeVXvzlg4iLtFIe8ijpyzGX64QqU/"
+session_token = "FwoGZXIvYXdzEFIaDAJD0V6+ZWRUaJcsFiLNAfkcUpcdReUNkKzNTSGo3qY22AqOdzPAvONR6Sz8rN2d5UhT+cXHZsM2/hEICiQme2EfHD1S/9/y5Fir6GcHsp2TFQHGPgndOf+rqJPLeFYQKNi2iV3KTRtRP6fjPgCaTUMRFZ3IiNsgb6bAHld5vkQ8l0zA6zw8CxpHB/qtw+8ZKBq3Hd3LOyUo01BgUN8+VMWrJUHunTxcKxsxAasmvAWhyz56KmjvZfIAUVZ+sTJG5SxKoqWxYvBdyExMHCPfc06OQU4pOZfxYle71kco1IaykwYyLeWfa9QnLm6nmDDJGwkQZw8o3eQdDWhEU6ZatPNuCbOAjbzg0CAYlvy1KZseXQ=="
 
 dynamodb = boto3.resource('dynamodb',
                 region_name="us-east-1",

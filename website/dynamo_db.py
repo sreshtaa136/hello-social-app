@@ -1,39 +1,37 @@
 import boto3, json
 from .models import Note, User
+# from dotenv import load_dotenv
+import os
 
-access_key_id = "ASIA23OAS5CFOTYJGFFT"
-secret_access_key = "FzZIfMAnaJlvpYapo/zezdXSrd7xh1I28pJxTuSJ"
-session_token = "FwoGZXIvYXdzEHgaDAhBBaEqc//Da7bxQCLNAU1fH5MD/WNEHG4IuWX8zMHudwZOg1EpNYXFb67R07cJz/PS1qJGkkDJzXsvJCDQEKZ3noC9tdt2TAmp9orSdRrT80OTaOINE6/L5SB8dZQkThikSLZPL7dA9Nkfb647NlKY9AB6GJAk/PfQMiSl548TWf5YmtAbbQY+viFCyd+7rJ8pkub+1MK+tuF/qm9iz1NZBtv7cSbYyyGsFDxld/AYCpv+Bq+dvkviK1kjeKKgPTlXyrZMJpkYy47W2FAkXJJ0Sav7vavzv9iQrCYojrW6kwYyLaQBQAl59BcTZ6DZaR51GIkPo4paIbbtABFFjt6Q1gBWN2HirnW/AKsVfdOnDw=="
+# comment before pushing
+# load_dotenv()
+access_key_id = os.getenv("AWS_ACCESS_KEY_ID")
+secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 dynamodb = boto3.resource('dynamodb',
-                region_name="us-east-1",
+                region_name=os.getenv("AWS_DEFAULT_REGION"),
                 aws_access_key_id = access_key_id,
                 aws_secret_access_key = secret_access_key,
-                aws_session_token = session_token
 )
 
 client = boto3.client('dynamodb',
-                    region_name="us-east-1",
+                    region_name=os.getenv("AWS_DEFAULT_REGION"),
                     aws_access_key_id = access_key_id,
                     aws_secret_access_key = secret_access_key,
-                    aws_session_token = session_token
 )
 
 s3 = boto3.client('s3',
-                region_name="us-east-1",
+                region_name=os.getenv("AWS_DEFAULT_REGION"),
                 aws_access_key_id = access_key_id,
                 aws_secret_access_key = secret_access_key,
-                aws_session_token = session_token
 )
 
 lambda_client = boto3.client('lambda',
-                region_name="us-east-1",
+                region_name=os.getenv("AWS_DEFAULT_REGION"),
                 aws_access_key_id = access_key_id,
                 aws_secret_access_key = secret_access_key,
-                aws_session_token = session_token
 )
 
-bucket_name = "elasticbeanstalk-us-east-1-746117589130"
 
 def create_users_table(dynamodb=None):
     # creating table if it doesn't exist
@@ -45,7 +43,6 @@ def create_users_table(dynamodb=None):
             dynamodb = boto3.resource('dynamodb',
                         aws_access_key_id = access_key_id,
                         aws_secret_access_key = secret_access_key,
-                        aws_session_token = session_token
             )        
 
         table = dynamodb.create_table(
@@ -53,7 +50,7 @@ def create_users_table(dynamodb=None):
             KeySchema=[
                 {
                     'AttributeName': 'email', 
-                    'KeyType': 'HASH' # Partition key
+                    'KeyType': 'HASH' # Partition key (primary key)
                 } 
             ],
             AttributeDefinitions=[

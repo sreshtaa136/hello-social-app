@@ -2,13 +2,17 @@ from flask import Blueprint, render_template, request, flash, jsonify
 from . import dynamo_db
 import json, os, boto3
 from werkzeug.utils import secure_filename
+# from dotenv import load_dotenv
+import os
 
-access_key_id = "ASIA23OAS5CFOTYJGFFT"
-secret_access_key = "FzZIfMAnaJlvpYapo/zezdXSrd7xh1I28pJxTuSJ"
-session_token = "FwoGZXIvYXdzEHgaDAhBBaEqc//Da7bxQCLNAU1fH5MD/WNEHG4IuWX8zMHudwZOg1EpNYXFb67R07cJz/PS1qJGkkDJzXsvJCDQEKZ3noC9tdt2TAmp9orSdRrT80OTaOINE6/L5SB8dZQkThikSLZPL7dA9Nkfb647NlKY9AB6GJAk/PfQMiSl548TWf5YmtAbbQY+viFCyd+7rJ8pkub+1MK+tuF/qm9iz1NZBtv7cSbYyyGsFDxld/AYCpv+Bq+dvkviK1kjeKKgPTlXyrZMJpkYy47W2FAkXJJ0Sav7vavzv9iQrCYojrW6kwYyLaQBQAl59BcTZ6DZaR51GIkPo4paIbbtABFFjt6Q1gBWN2HirnW/AKsVfdOnDw=="
+# comment before pushing
+# load_dotenv()
+access_key_id = os.getenv("AWS_ACCESS_KEY_ID")
+secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
+session_token = os.getenv("AWS_DEFAULT_REGION")
 
 s3 = boto3.client('s3',
-            region_name="us-east-1",
+            region_name=os.getenv("AWS_DEFAULT_REGION"),
             aws_access_key_id = access_key_id,
             aws_secret_access_key = secret_access_key,
             aws_session_token = session_token
